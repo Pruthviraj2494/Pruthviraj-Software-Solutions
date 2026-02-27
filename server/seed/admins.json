@@ -1,0 +1,54 @@
+{
+  "admins": [
+    {
+      "name": "Pruthviraj",
+      "email": "pruthviraj@pruthvirajsoft.com",
+      "password": "admin123",
+      "role": "admin",
+      "profile": {
+        "phone": "+91-9876543210",
+        "position": "CEO"
+      }
+    },
+    {
+      "name": "Amit Kumar",
+      "email": "amit@pruthvirajsoft.com",
+      "password": "admin456",
+      "role": "admin",
+      "profile": {
+        "phone": "+91-9876543211",
+        "position": "Co-Founder"
+      }
+    },
+    {
+      "name": "Sonia Singh",
+      "email": "sonia@pruthvirajsoft.com",
+      "password": "admin789",
+      "role": "admin",
+      "profile": {
+        "phone": "+91-9876543212",
+        "position": "Operations Manager"
+      }
+    },
+    {
+      "name": "Raj Patel",
+      "email": "raj@pruthvirajsoft.com",
+      "password": "admin101",
+      "role": "admin",
+      "profile": {
+        "phone": "+91-9876543213",
+        "position": "Technical Lead"
+      }
+    },
+    {
+      "name": "Neha Sharma",
+      "email": "neha@pruthvirajsoft.com",
+      "password": "admin102",
+      "role": "admin",
+      "profile": {
+        "phone": "+91-9876543214",
+        "position": "HR Manager"
+      }
+    }
+  ]
+}

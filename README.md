@@ -1,2 +1,0 @@
-# Pruthviraj-Software-Solutions
-Manaageda

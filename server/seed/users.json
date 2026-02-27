@@ -1,0 +1,54 @@
+{
+  "users": [
+    {
+      "name": "Rohit Mehta",
+      "email": "rohit.employee@pruthvirajsoft.com",
+      "password": "employee123",
+      "role": "employee",
+      "profile": {
+        "phone": "+91-9876500001",
+        "position": "Frontend Developer"
+      }
+    },
+    {
+      "name": "Ananya Iyer",
+      "email": "ananya.employee@pruthvirajsoft.com",
+      "password": "employee123",
+      "role": "employee",
+      "profile": {
+        "phone": "+91-9876500002",
+        "position": "Backend Developer"
+      }
+    },
+    {
+      "name": "Karan Verma",
+      "email": "karan.employee@pruthvirajsoft.com",
+      "password": "employee123",
+      "role": "employee",
+      "profile": {
+        "phone": "+91-9876500003",
+        "position": "QA Engineer"
+      }
+    },
+    {
+      "name": "Acme Industries",
+      "email": "contact@acme-industries.example",
+      "password": "client123",
+      "role": "client",
+      "profile": {
+        "phone": "+91-9876500101",
+        "company": "Acme Industries"
+      }
+    },
+    {
+      "name": "BlueSky Retail",
+      "email": "it@bluesky-retail.example",
+      "password": "client123",
+      "role": "client",
+      "profile": {
+        "phone": "+91-9876500102",
+        "company": "BlueSky Retail"
+      }
+    }
+  ]
+}
