@@ -12,6 +12,18 @@ Roles:
 - **Backend**: Node.js, Express, MongoDB, Mongoose, JWT, Socket.io
 - **Frontend**: React 18, TypeScript, Vite, Redux Toolkit, React Router, Tailwind CSS
 
+
+### Screenshots
+
+#### Admin Dashboard
+![Admin Dashboard](screenshots/Admin-Dashboard.png)
+
+#### Employee View
+![Employee View](screenshots/Employee-Dashboard.png)
+
+#### Client Portal
+![Client Portal](screenshots/Client-Dashboard.png)
+
 ### Live Demo
 
 - **Live URL**: [https://pruthviraj-software-solutions-1.onrender.com]
