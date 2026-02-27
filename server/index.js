@@ -1,4 +1,6 @@
-require("dotenv").config({ path: require("path").resolve(__dirname, "../.env") });
+if (process.env.NODE_ENV !== "production") {
+    require("dotenv").config({ path: require("path").resolve(__dirname, "../.env") });
+}
 const http = require("http");
 const path = require("path");
 const { Server: SocketServer } = require("socket.io");
@@ -13,17 +15,13 @@ const app = express();
 const port = process.env.PORT || 5000;
 const NODE_ENV = process.env.NODE_ENV || "development";
 
-const allowedOrigins = [
-    process.env.CLIENT_URL,
-];
-
-
-const CORS_OBJECT = {
-    origin: allowedOrigins,
-    credentials: true
+if (NODE_ENV !== "production") {
+    app.use(cors({
+        origin: "http://localhost:5173",
+        credentials: true,
+    }));
 }
 
-app.use(cors(CORS_OBJECT));
 app.use(express.json());
 app.use((req, res, next) => {
     if (req.method == "POST" || req.method == "PUT") {
@@ -33,18 +31,17 @@ app.use((req, res, next) => {
     next();
 });
 
-if (NODE_ENV === "production") {
-  const clientPath = path.join(__dirname, "../client/dist");
-
-  app.use(express.static(clientPath));
-
-  // React Router fallback
-  app.get("*", (req, res) => {
-    res.sendFile(path.join(clientPath, "index.html"));
-  });
-}
-
 require("./routes.js")(app);
+
+if (NODE_ENV === "production") {
+    const clientPath = path.join(__dirname, "../client/dist");
+
+    app.use(express.static(clientPath));
+
+    app.get("*", (req, res) => {
+        res.sendFile(path.join(clientPath, "index.html"));
+    });
+}
 
 app.use(handleError);
 
