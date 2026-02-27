@@ -46,7 +46,12 @@ if (NODE_ENV === "production") {
 app.use(handleError);
 
 const server = http.createServer(app);
-const io = new SocketServer(server, { cors: CORS_OBJECT });
+const io = new SocketServer(server, {
+    cors: {
+        origin: NODE_ENV === "production" ? false : "http://localhost:5173",
+        credentials: true,
+    }
+});
 messagingHandler(io);
 
 async function connectDB() {
